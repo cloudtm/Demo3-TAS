@@ -1,3 +1,4 @@
+set -e
 RG_HOME=RadargunTASDemo
 WPM_HOME=wpm
 CONTROLLER_HOME=ControllerTas
