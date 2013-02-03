@@ -27,3 +27,5 @@ cd ..
 echo "The demo is up and running. Plese wait for the system to reach a stable state."
 echo " Periodically, the TAS controller will produce plots with its performance forecast"
 tail -f ${CONTROLLER_HOME}/tas.log
+
+exit 0

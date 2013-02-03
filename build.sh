@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-TAS_HOME="TasDemo"
+TAS_HOME="TAS_Demo"
 WPMC_HOME="Workload_Monitor_Connector"
 WPMC_ARTIFACT="WPMConnector.jar"
 WPM_HOME="wpm"
@@ -9,7 +9,8 @@ RG_HOME="RadargunTASDemo"
 LATTICE_HOME="LatticeCloudTM"
 
 echo "Downloading the TAS demo package"
-
+git clone https://github.com/cloudtm/TAS_Demo.git ${TAS_HOME}
+cd ${TAS_HOME}
 echo "Downloading the Radargun Framework for the demo"
 git clone https://github.com/cloudtm/RadargunTASDemo.git ${RG_HOME}
 
@@ -44,3 +45,4 @@ ant makejar
 cd ..
 
 echo "Package successfully built"
+exit 0
