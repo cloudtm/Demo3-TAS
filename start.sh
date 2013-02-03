@@ -3,7 +3,7 @@ RG_HOME=RadargunTASDemo
 WPM_HOME=wpm
 CONTROLLER_HOME=ControllerTas
 
-if [ -z $1 ]; then
+if [ -z "$1" ]; then
    echo "Error: missing argument"
    echo "Usage: ./start \"list_of_ip_for_the_benchmark\""
    echo "Exiting"
