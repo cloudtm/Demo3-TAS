@@ -9,8 +9,6 @@ RG_HOME="RadargunTASDemo"
 LATTICE_HOME="LatticeCloudTM"
 
 echo "Downloading the TAS demo package"
-git clone https://github.com/cloudtm/TAS_Demo.git ${TAS_HOME}
-cd ${TAS_HOME}
 echo "Downloading the Radargun Framework for the demo"
 git clone https://github.com/cloudtm/RadargunTASDemo.git ${RG_HOME}
 
