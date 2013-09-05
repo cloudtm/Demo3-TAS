@@ -7,6 +7,7 @@ WPM_HOME="wpm"
 TASC_HOME="ControllerTas"
 RG_HOME="RadargunTASDemo"
 LATTICE_HOME="LatticeCloudTM"
+JD=1
 
 echo "Downloading the TAS demo package"
 echo "Downloading the Radargun Framework for the demo"
@@ -19,6 +20,9 @@ echo "Downloading WPM"
 git clone https://github.com/cloudtm/wpm ${WPM_HOME} 
 echo "Compiling WPM"
 cd ${WPM_HOME}
+if [ -n ${JD} ]; then
+   git reset --hard 872985accae6d421299517861d238431ae007c10
+fi
 ant
 cd ..
 
@@ -32,6 +36,9 @@ echo "Downloading the WPMConnector package"
 git clone https://github.com/cloudtm/Workload_Monitor_Connector ${WPMC_HOME}
 echo "Compiling the WPMConnector package"
 cd ${WPMC_HOME}
+if [ -n ${JD} ]; then
+   git reset --hard 864522c2de22edc129b3d2b379e6523f545e0897
+fi
 ant
 cd ..
 
